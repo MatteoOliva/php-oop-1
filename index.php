@@ -22,9 +22,9 @@
         <tbody>
             <?php foreach($productions as $production): ?>
             <tr>
-                <td><?$production->titolo?></td>
-                <td><?$production->lingua?></td>
-                <td><?$production->voto?></td>
+                <td><?=$production->titolo?></td>
+                <td><?=$production->lingua?></td>
+                <td><?=$production->voto?></td>
             </tr>
             <?php endforeach; ?>
         </tbody>
