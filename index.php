@@ -1,27 +1,33 @@
-<?php
-
-class Production {
-    public $titolo;
-    public $lingua;
-    public $voto;
-
-    function __construct(string $titolo, string $lingua,int $voto,)
-        {
-            $this->titolo = $titolo;
-            $this->lingua = $lingua;
-            $this->voto = $voto;
-        }
-    }
-$Pizza5Stelle = new Production('pizzeria', 'italiano', 5);
-var_dump($Pizza5Stelle);
-$PiadaDelCentro = new Production('piadineria', 'turco', 6);
-var_dump($PiadaDelCentro);
-$BiscottiNelSacco = new Production('Pasticceria', 'inglese', 5);
-var_dump($BiscottiNelSacco);
-
-$productions = [
-    $Pizza5Stelle,
-    $PiadaDelCentro,
-    $BiscottiNelSacco,
-];
-var_dump($productions);
+<?php require_once "main.php"; ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+</head>
+<body>
+    <table class="table">
+        <thead>
+            <th>Titolo</th>
+            <th>Lingua</th>
+            <th>Voto</th>
+        </thead>
+        <tbody>
+            <?php foreach($productions as $production): ?>
+            <tr>
+                <td><?$production->titolo?></td>
+                <td><?$production->lingua?></td>
+                <td><?$production->voto?></td>
+            </tr>
+            <?php endforeach; ?>
+        </tbody>
+    </table>
+</body>
+</html>
