@@ -12,5 +12,16 @@ class Production {
             $this->voto = $voto;
         }
     }
-$production = new Production('pizzeria', 'italiano', 5);
-var_dump($production);
+$Pizza5Stelle = new Production('pizzeria', 'italiano', 5);
+var_dump($Pizza5Stelle);
+$PiadaDelCentro = new Production('piadineria', 'turco', 6);
+var_dump($PiadaDelCentro);
+$BiscottiNelSacco = new Production('Pasticceria', 'inglese', 5);
+var_dump($BiscottiNelSacco);
+
+$productions = [
+    $Pizza5Stelle,
+    $PiadaDelCentro,
+    $BiscottiNelSacco,
+];
+var_dump($productions);
