@@ -18,6 +18,9 @@
             <th>Titolo</th>
             <th>Lingua</th>
             <th>Voto</th>
+            <th>Profitti</th>
+            <th>Durata</th>
+            <th>Numero Stagioni</th>
         </thead>
         <tbody>
             <?php foreach($productions as $production): ?>
@@ -25,7 +28,17 @@
                 <td><?=$production->titolo?></td>
                 <td><?=$production->lingua?></td>
                 <td><?=$production->voto?></td>
+                <?php if ($production instanceof Movie): ?>
+                <td><?=$production->profitti?></td>
+                <td><?=$production->durata?></td>
+                <td><?=null?></td>
+                <?php elseif ($production instanceof TVSerie): ?>
+                <td><?=null?></td>
+                <td><?=null?></td>
+                <td><?=$production->numero_stagioni?></td>
+                <?php endif; ?>
             </tr>
+            
             <?php endforeach; ?>
         </tbody>
     </table>
