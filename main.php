@@ -11,6 +11,14 @@ class Production
         $this->lingua = $lingua;
         $this->voto = $this->votoMax($voto);
     }
+
+    public function getTitolo() {
+        return $this->titolo;
+    }
+
+    public function setTitolo($titolo) {
+        $this->titolo = $titolo;
+    }
     public function votoMax($voto)
     {
         if ($voto >= 10) {
@@ -50,14 +58,26 @@ class TVSerie extends Production
 
 
 
-$spiderman = new Production('spiderman', 'italiano', 8);
-$thor = new Production('thor', 'italiano', 25);
-$hulk = new Production('hulk', 'inglese', 7);
+// $spiderman = new Production('spiderman', 'italiano', 8);
+// $thor = new Production('thor', 'italiano', 25);
+// $hulk = new Production('hulk', 'inglese', 7);
+// $productions = [
+//     $spiderman,
+//     $thor,
+//     $hulk,
+// ];
+
+
+$spiderman = new Movie('spidmen', 'italiano', 8, 1456010, 120);
+$spiderman->setTitolo('Spiderman');
+$loki = new TVSerie ('Loki', 'inglese', 25, 4);
+
+
 
 $productions = [
     $spiderman,
-    $thor,
-    $hulk,
+    $loki,
 ];
+
 
 
