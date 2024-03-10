@@ -19,12 +19,12 @@ class Production {
     }
 }
 
-$pizzeria = new Production('Pizza5Stelle', 'italiano', 5);
-$piadineria = new Production('PiadaDelCentro', 'turco', 25);
-$pasticceria = new Production('BiscottiNelSacco', 'inglese', 5);
+$spiderman = new Production('spiderman', 'italiano', 8);
+$thor = new Production('thor', 'italiano', 25);
+$hulk = new Production('hulk', 'inglese', 7);
 
 $productions = [
-    $pizzeria,
-    $piadineria,
-    $pasticceria,
+    $spiderman,
+    $thor,
+    $hulk,
 ];
