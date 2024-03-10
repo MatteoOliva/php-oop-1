@@ -1,4 +1,7 @@
-<?php require_once "main.php"; ?>
+<?php require_once "main.php";
+
+$vuoto = 'Non disponibile';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,10 +34,10 @@
                 <?php if ($production instanceof Movie): ?>
                 <td><?=$production->profitti?></td>
                 <td><?=$production->durata?></td>
-                <td><?=null?></td>
+                <td><?=$vuoto?></td>
                 <?php elseif ($production instanceof TVSerie): ?>
-                <td><?=null?></td>
-                <td><?=null?></td>
+                <td><?=$vuoto?></td>
+                <td><?=$vuoto?></td>
                 <td><?=$production->numero_stagioni?></td>
                 <?php endif; ?>
             </tr>
